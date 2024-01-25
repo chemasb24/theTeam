@@ -1,7 +1,15 @@
 body{
-    font-family: "Francois+One", sans-serif;
+    font-family: "Merriweather", serif;
     background-image: url(../img/fondo_cesped.jpg);
     background-position: center; /* Center the image */
     background-repeat: repeat; /* Do not repeat the image */
     background-size: 30%; /* Resize the background image to cover the entire container */
+}
+
+article{
+    margin-top: 58px;
+}
+
+.modal-content, .navbar{
+    opacity: 90%;
 }

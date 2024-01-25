@@ -5,19 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./escudo_rcde.svg">
     <title>The Team</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
-<body class="text-light ">
+<body class="text-light">
+    <!-- Barra de navegación superior con scrollspy-->
+    <nav id="menu-superior" class="navbar fixed-top bg-dark border-bottom border-light border-2 px-3 mb-3">
+        <a class="navbar-brand text-light" href="#">
+            <img src="./escudo_rcde.svg" alt="Logo RCD Espanyol" width="30" height="30" class="d-inline-block align-text-top">
+            RCD Espanyol de Barcelona
+            </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+            <a class="nav-link text-light active opacity-75" href="#porteros">Porteros</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-light opacity-75" href="#defensas">Defensas</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-light opacity-75" href="#centrocampistas">Centrocampistas</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-light opacity-75" href="#delanteros">Delanteros</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-light opacity-75" href="#entrenador">Entrenador</a>
+            </li>
+        </ul>
+    </nav>
     <main>
-        <article class="containe-fluid">
-            <div class="d-flex justify-content-center">
-                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-3 text-center bg-opacity-75">PORTEROS</h2>
+        <article class="container-fluid px-0" data-bs-spy="scroll" data-bs-target="#menu-superior">
+            <!-- Carrusel de imágenes-->
+            <div id="carrusel" class="carousel slide border-bottom border-light border-2">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/carrusel/rcde_stadium.jpg" class="d-block w-100" alt="Stage Front Stadium">
+                    <div class="carousel-caption d-none d-md-block bg-dark round bg-opacity-75 px-5">
+                      <h5>Stage Front Stadium</h5>
+                      <p>Catalogado como uno de los mejores estadios europeos, tiene una capacidad para 40.000 espectadores y unas instalaciones funcionales, innovadoras y versátiles en una localización excelente.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/carrusel/rcde_store.jpg" class="d-block w-100" alt="RCDE Store">
+                    <div class="carousel-caption d-none d-md-block bg-dark round bg-opacity-75">
+                      <h5>RCDE Store</h5>
+                      <p>La tienda online oficial del RCD Espanyol puede visitarse en este <a class="text-light link-offset-2" href="https://shop.rcdespanyol.com/es/" target="_blank">enlace</a>.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/carrusel/bg_aficion.jpg" class="d-block w-100" alt="Afición perica">
+                    <div class="carousel-caption d-none d-md-block bg-dark round bg-opacity-75">
+                      <h5>Afición perica</h5>
+                      <p>Son muchos los apodos relacionados con el reino animal que han recibido equipos de LaLiga.<br />Al RCD Espanyol se le conoce tradicionalmente como el conjunto 'perico' o 'periquito'.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div id="porteros" class="d-flex justify-content-center">
+                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-2 text-center bg-opacity-75">PORTEROS</h2>
             </div>
             <!-- Contenedor de Porteros-->
-            <div class="d-flex flex-wrap justify-content-around align-items-end mt-2 mb-5 mx-3">
+            <div class="d-flex flex-wrap justify-content-evenly align-items-end mt-2 mb-5 mx-4">
                 <!-- Contenedor de jugador -->
                 <div class="d-flex flex-column mx-3 mb-3">
                     <!-- Imagen -->
@@ -25,7 +89,7 @@
                         <img class="shadow" src="./img/plantilla/joan_garcia.png" alt="Joan García">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75 shadow">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75 shadow">
                         <h5>JOAN GARCÍA</h5>
                         <hr>
                         <p>Nombre: Joan</p>
@@ -45,7 +109,7 @@
                         <img src="./img/plantilla/pacheco.png" alt="Pacheco">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>PACHECO</h5>
                         <hr>
                         <p>Nombre: Fernando</p>
@@ -65,7 +129,7 @@
                         <img src="./img/plantilla/angel_fortuno.png" alt="Ángel Fortuño">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>ÁNGEL FORTUÑO</h5>
                         <hr>
                         <p>Nombre: Ángel</p>
@@ -80,10 +144,10 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-5">
-                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-3 text-center bg-opacity-75">DEFENSAS</h2>
+                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-2 text-center bg-opacity-75">DEFENSAS</h2>
             </div>
             <!-- Contenedor de Defensas-->
-            <div class="d-flex flex-wrap justify-content-around align-items-end mt-2 mb-5 mx-3">
+            <div id="defensas" class="d-flex flex-wrap justify-content-evenly align-items-end mt-2 mb-5 mx-4">
                 <!-- Contenedor de jugador -->
                 <div class="d-flex flex-column mx-3 mb-3">
                     <!-- Imagen -->
@@ -91,7 +155,7 @@
                         <img src="./img/plantilla/cabrera.png" alt="Cabrera">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>CABRERA</h5>
                         <hr>
                         <p>Nombre: Leandro Daniel</p>
@@ -111,7 +175,7 @@
                         <img src="./img/plantilla/calero.png" alt="Calero">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>CALERO</h5>
                         <hr>
                         <p>Nombre: Fernando</p>
@@ -131,7 +195,7 @@
                         <img src="./img/plantilla/sergi_gomez.png" alt="Sergi Gómez">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>SERGI GÓMEZ</h5>
                         <hr>
                         <p>Nombre: Sergi</p>
@@ -151,7 +215,7 @@
                         <img src="./img/plantilla/brian_olivan.png" alt="Brian Oliván">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>BRIAN OLIVÁN</h5>
                         <hr>
                         <p>Nombre: Brian</p>
@@ -171,7 +235,7 @@
                         <img src="./img/plantilla/oscar_gil.png" alt="Óscar Gil">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>ÓSCAR GIL</h5>
                         <hr>
                         <p>Nombre: Óscar</p>
@@ -191,7 +255,7 @@
                         <img src="./img/plantilla/ramon_ramos.png" alt="Ramon Ramos">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>RAMON RAMOS</h5>
                         <hr>
                         <p>Nombre: Ramon</p>
@@ -199,7 +263,7 @@
                         <p>Fecha de Nacimiento: 13-03-2001</p>
                         <p>Lugar de Nacimiento: São João</p>
                         <p>Nacionalidad: Brasileña</p>
-                        <button type="button" class="btn btn-primary opacity-75 mt-1" data-bs-toggle="modal" data-bs-target="#modalOscarGil">
+                        <button type="button" class="btn btn-primary opacity-75 mt-1" data-bs-toggle="modal" data-bs-target="#modalRamonRamos">
                             Más info
                         </button>
                     </div>
@@ -211,7 +275,7 @@
                         <img src="./img/plantilla/victor_ruiz.png" alt="Víctor Ruiz">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>VÍCTOR RUIZ</h5>
                         <hr>
                         <p>Nombre: Víctor</p>
@@ -226,10 +290,10 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-5">
-                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-3 text-center bg-opacity-75">CENTROCAMPISTAS</h2>
+                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-2 text-center bg-opacity-75">CENTROCAMPISTAS</h2>
             </div>
             <!-- Contenedor de Centrocampistas-->
-            <div class="d-flex flex-wrap justify-content-around align-items-end mt-2 mb-5 mx-3">
+            <div id="centrocampistas" class="d-flex flex-wrap justify-content-evenly align-items-end mt-2 mb-5 mx-4">
                 <!-- Contenedor de jugador -->
                 <div class="d-flex flex-column mx-3 mb-3">
                     <!-- Imagen -->
@@ -237,7 +301,7 @@
                         <img src="./img/plantilla/pol_lozano.png" alt="Pol Lozano">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>POL LOZANO</h5>
                         <hr>
                         <p>Nombre: Pol</p>
@@ -257,7 +321,7 @@
                         <img src="./img/plantilla/gragera.png" alt="Gragera">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>GRAGERA</h5>
                         <hr>
                         <p>Nombre: José</p>
@@ -277,7 +341,7 @@
                         <img src="./img/plantilla/lazo.png" alt="Lazo">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>LAZO</h5>
                         <hr>
                         <p>Nombre: José Carlos</p>
@@ -297,7 +361,7 @@
                         <img src="./img/plantilla/salvi.png" alt="Salvi">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>SALVI</h5>
                         <hr>
                         <p>Nombre: Salvi</p>
@@ -317,7 +381,7 @@
                         <img src="./img/plantilla/edu_exposito.png" alt="Edu Expósito">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>EDU EXPÓSITO</h5>
                         <hr>
                         <p>Nombre: Eduardo</p>
@@ -337,7 +401,7 @@
                         <img src="./img/plantilla/nico_melamed.png" alt="Nico Melamed">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>NICO MELAMED</h5>
                         <hr>
                         <p>Nombre: Nicolás</p>
@@ -357,7 +421,7 @@
                         <img src="./img/plantilla/roger_martinez.png" alt="Roger Martínez">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>ROGER MARTÍNEZ</h5>
                         <hr>
                         <p>Nombre: Roger</p>
@@ -372,10 +436,10 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-5">
-                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-3 text-center bg-opacity-75">DELANTEROS</h2>
+                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-2 text-center bg-opacity-75">DELANTEROS</h2>
             </div>
             <!-- Contenedor de Delanteros-->
-            <div class="d-flex flex-wrap justify-content-around align-items-end mt-2 mb-5 mx-3">
+            <div id="delanteros" class="d-flex flex-wrap justify-content-evenly align-items-end mt-2 mb-5 mx-4">
                 <!-- Contenedor de jugador -->
                 <div class="d-flex flex-column mx-3 mb-3">
                     <!-- Imagen -->
@@ -383,7 +447,7 @@
                         <img src="./img/plantilla/puado.png" alt="Puado">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>PUADO</h5>
                         <hr>
                         <p>Nombre: Javier</p>
@@ -403,7 +467,7 @@
                         <img src="./img/plantilla/keita_balde.png" alt="Keita Balde">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>KEITA BALDE</h5>
                         <hr>
                         <p>Nombre: Keita</p>
@@ -423,7 +487,7 @@
                         <img src="./img/plantilla/pere_milla.png" alt="Pere Milla">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>PERE MILLA</h5>
                         <hr>
                         <p>Nombre: Pere</p>
@@ -443,7 +507,7 @@
                         <img src="./img/plantilla/jofre_carreras.png" alt="Jofre Carreras">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>JOFRE CARRERAS</h5>
                         <hr>
                         <p>Nombre: Jofre</p>
@@ -458,10 +522,10 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-2 mb-5">
-                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-3 text-center bg-opacity-75">ENTRENADOR</h2>
+                <h2 class="p-3 mt-5 rounded w-75 bg-primary border border-light border-2 text-center bg-opacity-75">ENTRENADOR</h2>
             </div>
             <!-- Contenedor de Entrenador-->
-            <div class="d-flex flex-wrap justify-content-around align-items-end mt-2 mb-5 mx-3">
+            <div id="entrenador" class="d-flex flex-wrap justify-content-evenly align-items-end mt-2 mb-5 mx-4">
                 <!-- Contenedor de jugador -->
                 <div class="d-flex flex-column mx-3 mb-3">
                     <!-- Imagen -->
@@ -469,7 +533,7 @@
                         <img src="./img/plantilla/luis_miguel_ramis.png" alt="Luis Miguel Ramis">
                     </div>
                     <!-- Texto -->
-                    <div class="py-3 px-4 rounded bg-dark border border-dark border-3 text-center lh-1 bg-opacity-75">
+                    <div class="py-3 px-4 rounded bg-dark border border-light border-2 text-center lh-1 bg-opacity-75">
                         <h5>LUIS MIGUEL RAMIS</h5>
                         <hr>
                         <p>Nombre: Luis Miguel</p>
@@ -491,610 +555,573 @@
     </footer>
     <!-- Modales de más info-->
     <div id="modalJoanGarcia" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Joan García</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/joan_garcia.png" alt="Joan García">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>Joan García, portero del Espanyol, no ha participado en multitud de los partidos en LaLiga durante la 2022/2023, disputando un total de uno aparición y 90 minutos. Esa única aparición en 38 partidos fue como titular.</p>
                             <p>La última aparición de García en LaLiga fue el 4 de junio, disputando 90 minutos con Espanyol ante Almería en un empate 3-3.</p>
                             <p>García disputó dos partidos en LaLiga la última temporada con Espanyol.</p>
                             <p>Antes de fichar por Espanyol en octubre 2020, García disputó 17 partidos ligueros en total con Espanyol II.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalPacheco" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Joan García</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/pacheco.png" alt="Pacheco">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                         <p>Fernando Pacheco, portero del Espanyol, participado en 17 partidos en LaLiga esta temporada, todos con su actual club, Espanyol. Anteriormente había jugado en Almería en la competición durante la 2022/2023.</p>
                         <p>La última aparición de Pacheco en liga fue el 28 de mayo con Espanyol al Valencia, un partido en el que jugó 90 minutos en un empate 2-2. Él ha logrado tres porteríans a cero esta temporada.</p>
                         <p>Pacheco disputó 34 partidos en LaLiga la última temporada con el Deportivo Alavés.</p>
                         <p>Antes de fichar por Espanyol en enero 2023, Pacheco disputó uno partido liguero en total con Almería.</p>
-                        <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                        <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalAngelFortuno" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Ángel Fortuño</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/angel_fortuno.png" alt="Ángel Fortuño">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>Ángel Fortuño del Espanyol aún no ha participado en ningún duelo en LaLiga tras fichar por el club el septiembre 2020.</p>
                             <p>En la última temporada con Espanyol II, Fortuño disputó 31 partidos en LaLiga.</p>
                             <p>Fortuño se unió Espanyol en septiembre 2020 procedente Espanyol II, equipo con el que disputó 67 partidos ligueros.</p>
                             <p>El RCD Espanyol y el portero Ángel Fortuño han llegado a un acuerdo para renovar el contrato del jugador blanquiazul, que finalizaba en junio de 2022. El club y Fortuño han ampliado su vinculación hasta el 30 de junio de 2024.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalCabrera" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Cabrera</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/cabrera.png" alt="Cabrera">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
-                            <p>El defensa Leandro Cabrera juega en Espanyol y ha jugado 32 partidos en LaLiga en la 2022/2023 con un total de 2.672 minutos. Él ha ha comenzado en el once titular en 31 de sus 38 partidos y partiendo desde el banquillo en uno ocasión.</p>
+                        <div class="fs-6 pt-2">
+                            <p>El defensa Leandro Cabrera juega en Espanyol y ha jugado 32 partidos en LaLiga en la 2022/2023 con un total de 2.672 minutos.</p>
                             <p>La última aparición de Cabrera en LaLiga fue el 28 de mayo con Espanyol al Valencia en un empate 2-2. En ese choque logró una asistencia para su club en un empate 2-2. Esta temporada el defensa ha repartido una asistencia.</p>
                             <p>Cabrera disputó 37 partidos en LaLiga la última temporada con Espanyol y marcó dos goles.</p>
                             <p>Antes de fichar por Espanyol en enero 2020, Cabrera disputó 59 partidos ligueros en total con el Getafe, marcando cuatro goles.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalCalero" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Calero</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/calero.png" alt="Calero">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
-                            <p>Fernando Calero, defensa del Espanyol, ha participado en 27 partidos en LaLiga en la 2022/2023 con un total de 1.616 minutos acumulados de juego. Él ha salido de inicio en 20 de sus 38 partidos y entradodesde el banquillo en siete ocasiones.</p>
+                        <div class="fs-6 pt-2">
+                            <p>Fernando Calero, defensa del Espanyol, ha participado en 27 partidos en LaLiga en la 2022/2023 con un total de 1.616 minutos acumulados de juego.</p>
                             <p>La anterior aparición de Calero en la competición fue el 4 de junio con Espanyol ante Almería, un duelo en el que jugó 45 minutos en un empate 3-3.</p>
                             <p>Calero disputó 16 partidos en LaLiga la última temporada con Espanyol.</p>
                             <p>Calero se unió Espanyol en agosto 2019 procedente el Real Valladolid, equipo con el que disputó 63 partidos ligueros.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalSergiGomez" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Sergi Gómez</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/sergi_gomez.png" alt="Sergi Gómez">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
-                            <p>El defensa Sergi Gómez juega en Espanyol y ha participado en 29 partidos en LaLiga en la 2022/2023 con un total de 2.343 minutos acumulados de juego. Él ha salido de inicio en 26 de sus 38 partidos y partiendo desde el banquillo en tres ocasiones.</p>
+                        <div class="fs-6 pt-2">
+                            <p>El defensa Sergi Gómez juega en Espanyol y ha participado en 29 partidos en LaLiga en la 2022/2023 con un total de 2.343 minutos acumulados de juego.</p>
                             <p>La última vez que Gómez disputó un partido en LaLiga fue el 28 de mayo con Espanyol al Valencia, un duelo en el que jugó 89 minutos en un empate 2-2. Él ha recibido dos tarjetas rojas.</p>
                             <p>En la última temporada con Espanyol, Gómez disputó 31 partidos en LaLiga, marcando un gole y asistiendo en dos.</p>
                             <p>Gómez fichó por Espanyol en julio 2021 procedente el Sevilla, equipo con el que disputó 54 partidos ligueros.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalBrianOlivan" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Brian Oliván</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/brian_olivan.png" alt="Brian Oliván">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
-                            <p>El defensa del Espanyol, Brian Oliván, ha participado en 30 encuentros en LaLiga en la 2022/2023 con un total de 2.413 minutos acumulados de juego. Él ha ha comenzado en el once titular en 29 de sus 38 partidos y ingresado desde el banquillo en uno ocasión.</p>
+                        <div class="fs-6 pt-2">
+                            <p>El defensa del Espanyol, Brian Oliván, ha participado en 30 encuentros en LaLiga en la 2022/2023 con un total de 2.413 minutos acumulados de juego.</p>
                             <p>La última presenciade Oliván en la competición fue el 4 de junio con Espanyol contra Almería en un empate 3-3. En ese encuentro logró una asistencia para su equipo en un empate 3-3.</p>
                             <p>Su primer gol de la campaña llegó en una derrota por 3-2 contra la Real Sociedad el 13 febrero.</p>
                             <p>En la última temporada con Mallorca, Oliván disputó 28 partidos en LaLiga y marcó un gol.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalOscarGil" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Óscar Gil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/oscar_gil.png" alt="Óscar Gil">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
-                            <p>Comenzó su formación en el Kelme C. F. y Elche C. F. En 2015 hizo su debut con el Elche Ilicitano C. F. en el que jugó durante cuatro temporadas alternando participaciones en Tercera División y Segunda División B.</p>
+                        <div class="fs-6 pt-2">
+                            <p>Comenzó su formación en el Kelme C. F. y Elche C. F. En 2015 hizo su debut con el Elche Ilicitano C. F. en el que jugó durante cuatro temporadas.</p>
                             <p>El 17 de octubre de 2018 debutó con el primer equipo en un encuentro de Copa del Rey frente al Córdoba C. F. en el que acabó lesionado.</p>
                             <p>Debutó en la Segunda División de España con el Elche C. F. durante la temporada 2019-20 en un encuentro frente a la A. D. Alcorcón disputado el 24 de agosto de 2019.</p>
                             <p>El 7 de septiembre de 2020 fichó por el R. C. D. Espanyol para las siguientes cuatro temporadas después de que el club catalán abonara su cláusula de rescisión.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <div id="modalRamonRamos" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
+                    <h5 class="modal-title">Ramon Ramos</h5>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="d-flex align-items-end mb-3 pe-3">
+                        <!-- Imagen -->
+                        <div class="me-3">
+                            <img class="imgModal" src="./img/plantilla/ramon_ramos.png" alt="Ramon Ramos">
+                        </div>
+                        <!-- Texto-->
+                        <div class="fs-6 pt-2">
+                            <p>Ramon ha participado en 15 partidos en Serie A esta temporada, todos con su actual club, RB Bragantino. Anteriormente había jugado en Flamengo en la competición durante la 2022.</p>
+                            <p>La anterior presencia de Ramon en liga fue el 13 de noviembre con RB Bragantino ante Fluminense, un encuentro en el que jugó 26 minutos en una derrota por 1-0.</p>
+                            <p>Ramon disputó cinco partidos en Serie A la última temporada con Flamengo.</p>
+                            <p>Ramon se unió al RB Bragantino cedido por Flamengo en abril 2022, equipo en el que disputó un total de 27 partidos ligueros.</p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalVictorRuiz" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Víctor Ruiz</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/victor_ruiz.png" alt="Víctor Ruiz">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>El defensa del Real Betis, Víctor Ruiz, aún no ha jugado ninguno de los cuatro partidos que ha disputado su equipo en LaLiga en la 2023/2024.</p>
                             <p>La última presencia de Ruiz en LaLiga fue el 19 de marzo de 2023, disputando solo siete minutos con el Real Betis ante Mallorca en una victoria por 1-0.</p>
                             <p>El equipo del Real Betis se sitúa actualmente 6° en la tabla clasificatoria con siete puntos y viaja para enfrentarse al Barcelona en LaLiga el próximo 16 de septiembre.</p>
                             <p>En su última temporada en LaLiga, Ruiz disputó 10 partidos con el Real Betis.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalPolLozano" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Pol Lozano</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/pol_lozano.png" alt="Pol Lozano">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
-                            <p>Pol Lozano, centrocampista del Espanyol, no ha participado en multitudde los partidos en LaLiga durante la 2022/2023, disputando un total de cuatro apariciones y 13 minutos. Cada una de sus apariciones esta temporada han sido como suplente.</p>
+                        <div class="fs-6 pt-2">
+                            <p>Pol Lozano, centrocampista del Espanyol, no ha participado en multitudde los partidos en LaLiga durante la 2022/2023, disputando un total de cuatro apariciones y 13 minutos.</p>
                             <p>La última presencia de Lozano en liga fue el 6 de noviembre con Espanyol al Atlético Madrid, un encuentro en el que jugó solamente dos minutos en un empate 1-1.</p>
                             <p>Recibir al Osasuna el próximo 4 de febrero es el siguiente partido del Espanyol en LaLiga, club que suma 20 puntos y que se está clasificado 14°.</p>
                             <p>Lozano disputó 31 partidos en LaLiga la última temporada con Girona, marcando un gole y asistiendo en dos.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalGragera" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Gragera</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/gragera.png" alt="Gragera">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>José Gragera, centrocampista del Espanyol, ha jugado nueve encuentros en LaLiga en la 2022/2023 desde su fichaje por el club el enero 2023, saliendo de inicio en cinco de ellos y partiendo desde el banquillo en cuatro ocasiones.</p>
-                            <p>La anterior vez que Gragera disputó un partido en la competición fue el 21 de abril con Espanyol al Cádiz, un duelo en el que jugó 65 minutos en un empate 0-0. En total, el centrocampista ha logrado uno goles en la 2022/2023.</p>
+                            <p>La anterior vez que Gragera disputó un partido en la competición fue el 21 de abril con Espanyol al Cádiz, un duelo en el que jugó 65 minutos en un empate 0-0.</p>
                             <p>Él abrió su cuenta goleadora esta campañan al Celta de Vigo el 18 marzo, marcando durante la derrota por 3-1.</p>
                             <p>Gragera disputó 37 partidos en LaLiga la última temporada con Sporting Gijón, marcando un gole y asistiendo en uno.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalLazo" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Lazo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/lazo.png" alt="Lazo">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>Formado en la cantera del Real Madrid Club de Fútbol, en 2016 se marchó cedido al Villarreal Club de Fútbol "B" con el que jugó 26 partidos y marcó un gol.</p>
                             <p>Poco después y tras regresar al Real Madrid Castilla, volvió a salir cedido, en esta ocasión al Real Club Recreativo de Huelva.</p>
-                            <p>En el año 2018 el Getafe C. F. lo fichó como agente libre al no ser renovado por el Real Madrid. Disputó una temporada en la que hizo 9 goles.</p>
+                            <p>En el año 2018 el Getafe C. F. lo fichó como agente libre al no ser renovado por el Real Madrid.</p>
                             <p>Después de tres años en Almería, logrando en el último de ellos el ascenso a Primera División y debutando en la categoría en agosto ante el Real Madrid, fichó por el R. C. D. Espanyol hasta 2027.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalSalvi" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Salvi</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/salvi.png" alt="Salvi">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>Salvi Sánchez, centrocampista del Rayo Vallecano, ha participado en un único encuentro de LaLiga hasta el momento en la 2023/2024.</p>
                             <p>La última aparición de Sánchez en liga fue el 11 de agosto, disputando 27 minutos con Rayo Vallecano contra Almería en una victoria por 2-0.</p>
                             <p>Una salida ante el Granada el próximo 21 de agosto es el siguiente choque del Rayo Vallecano en LaLiga, equipo que suma tres puntos y que se se sitúa actualmente 1°.</p>
-                            <p>Sánchez disputó 24 partidos en LaLiga la última temporada con Rayo Vallecano. Hasta el momento en LaLiga, el jugador de 32 años ha disputado 76 partidos en la competición, logrando un total de cuatro tantos y solo una asistencia.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p>Sánchez disputó 24 partidos en LaLiga la última temporada con Rayo Vallecano. Hasta el momento en LaLiga, el jugador de 32 años ha disputado 76 partidos en la competición.</p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalEduExposito" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Edu Expósito</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/edu_exposito.png" alt="Edu Expósito">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>Edu Expósito, centrocampista del Espanyol, ha jugado 28 encuentros en LaLiga en la 2022/2023 con un total de 1.161 minutos.</p>
                             <p>La última presencia de Expósito en liga fue el 4 de junio, disputando 60 minutos con Espanyol contra Almería en un empate 3-3.</p>
-                            <p>Contra la Real Sociedad el 18 septiembre, Expósito marcó por última vez, marcando en una derrota por 2-1. Su primer gol de la temporada llegó en el empate 2-2 al Celta de Vigo el 13 agosto.</p>
+                            <p>Contra la Real Sociedad el 18 septiembre, Expósito marcó por última vez, marcando en una derrota por 2-1. Su primer gol de la temporada llegó en el empate 2-2 al Celta de Vigo.</p>
                             <p>En su última temporada en LaLiga, Expósito protagonizó 42 partidos con el Eibar, marcando siete goles y asistiendo en siete.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalNicoMelamed" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Nico Melamed</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/nico_melamed.png" alt="Nico Melamed">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>El centrocampista Nico Melamed juega en Espanyol y ha jugado 32 partidos en LaLiga en la 2022/2023 con un total de 1.248 minutos. Él ha salido de inicio en 16 ocasiones y como suplente en 16.</p>
                             <p>La última presencia de Melamed en competición fue el 4 de junio, disputando 78 minutos con Espanyol ante Almería en un empate 3-3. En total, el centrocampista ha logrado uno goles en la 2022/2023 y repartido dos asistencias.</p>
                             <p>Su primer gol de la campaña llegó en una victoria por 2-1 contra Rayo Vallecano el 21 mayo.</p>
                             <p>Melamed disputó 31 partidos en LaLiga la última temporada con Espanyol y marcó dos goles.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalRogerMartinez" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Roger Martínez</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/roger_martinez.png" alt="Roger Martínez">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
-                            <p>Roger Martínez es un centrocampista del Espanyol que no ha participado en muchos de los encuentro en LaLiga durante la 2022/2023, disputando un total de uno aparición y seis minutos.</p> 
+                        <div class="fs-6 pt-2">
+                            <p>Roger Martínez es un centrocampista del Espanyol que no ha participado en muchos de los encuentros en LaLiga durante la 2022/2023.</p> 
                             <p>En su última temporada en LaLiga, Martínez protagonizó cero partidos con Espanyol.</p>
                             <p>Antes de fichar por Espanyol en noviembre 2021, Martínez disputó 62 partidos ligueros en total con Espanyol B, marcando cinco goles.</p>
                             <p>El 7 de enero de 2023 fue el día en el que Martínez hizo su debut en LaLiga. Ese partido es hasta ahora la única aparición de Martínez en la LaLiga.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalPuado" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Puado</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/puado.png" alt="Puado">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
-                            <p>Empezó a formarse como futbolista en el UE Cornellà y llegó a la cantera perica en la campaña 2014-15 para reforzar el Juvenil B y pronto destacó por su facilidad goleadora.</p>
-                            <p>En la temporada 2016-17 ascendió al filial, con la mala fortuna de que en su primera aparición con el equipo se rompió el ligamento cruzado de la rodilla izquierda..</p>
-                            <p>En verano de 2018, tras la llegada de Rubi al banquillo del R. C. D. Espanyol y marcar dos goles en pretemporada, fue confirmado como jugador del primer equipo para la temporada 2018-19.</p>
+                        <div class="fs-6 pt-2">
+                            <p>Empezó a formarse como futbolista en el UE Cornellà y llegó a la cantera perica en la campaña 2014-15 para reforzar el Juvenil B.</p>
+                            <p>En la temporada 2016-17 ascendió al filial, con la mala fortuna de que en su primera aparición con el equipo se rompió el ligamento cruzado de la rodilla izquierda.</p>
+                            <p>En verano de 2018, tras la llegada de Rubi al banquillo del R. C. D. Espanyol y marcar dos goles en pretemporada, fue confirmado como jugador del primer equipo.</p>
                             <p>Fue internacional con España en categorías inferiores, el 8 de junio de 2021 debutó con la selección absoluta en un amistoso ante Lituania en el que anotó el definitivo 4-0.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalKeitaBalde" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Keita balde</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/keita_balde.png" alt="Keita balde">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>Keita Baldé es un delantero del Cagliari que aún no ha disputado ningún encuentro en Serie B tras fichar por el club el agosto 2022.</p>
                             <p>El equipo del Cagliari está clasificado 5° en la clasificación con cuatro puntos y recibe en casa ante Modena en Serie B el próximo 2 de septiembre.</p>
                             <p>En la última temporada con el Cagliari, Baldé disputó 26 partidos en Serie A, marcando tres goles y asistiendo en uno.</p>
                             <p>Baldé se unió el Cagliari en agosto 2022 procedente el Cagliari, equipo con el que disputó 26 partidos ligueros.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalPereMilla" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Pere Milla</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/pere_milla.png" alt="Pere Milla">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>Pere Milla, delantero del Elche, ha participado en 31 encuentros en LaLiga en la 2022/2023 con un total de 1.874 minutos.</p>
-                            <p>Milla anotó en liga por última vez con un hat-trick al Villarreal el 4 febrero, el último tanto logrado en el minuto 3, 48, and 52. En su última temporada en LaLiga, Milla jugó 32 partidos con el Elche, marcando ocho goles y asistiendo en tres.</p>
+                            <p>Milla anotó en liga por última vez con un hat-trick al Villarreal el 4 febrero, el último tanto logrado en el minuto 3, 48, and 52. En su última temporada en LaLiga, Milla jugó 32 partidos con el Elche.</p>
                             <p>Milla fichó por el Elche en julio 2019 procedente el Eibar, equipo con el que disputó cinco partidos ligueros.</p>
                             <p>En total en su carrera en LaLiga, el jugador de 30 años ha disputado 100 partidos en la competición, logrando un total de 18 goles y siete asistencias.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalJofreCarreras" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Jofre Carreras</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/jofre_carreras.png" alt="Jofre Carreras">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>El delantero Espanyol, Jofre Carreras, fichó por el club el agosto 2020.</p>
                             <p>La última aparición de Carreras en liga fue el 14 de mayo de 2022, disputando solo tres minutos con Espanyol ante el Valencia en un empate 1-1.</p>
                             <p>El próximo partido en Primera División Espanyol, que está clasificado 2° con uno punto, es para enfrentarse como local ante Rayo Vallecano el próximo 19 de agosto.</p>
-                            <p>En su última temporada en Primera División, Carreras protagonizó tres partidos con Espanyol y logró uno asistencia. Carreras fichó por Espanyol en agosto 2020 procedente Espanyol II, equipo con el que disputó 29 partidos ligueros.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p>En su última temporada en Primera División, Carreras protagonizó tres partidos con Espanyol y logró uno asistencia. Carreras fichó por Espanyol en agosto 2020 procedente del Espanyol B.</p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="modalRamis" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-bg-dark border border-light border-1">
+                <div class="modal-header px-4">
                     <h5 class="modal-title">Luis Miguel Ramis</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="d-flex align-items-end mb-3 pe-3">
                         <!-- Imagen -->
                         <div class="me-3">
                             <img class="imgModal" src="./img/plantilla/luis_miguel_ramis.png" alt="Luis Miguel Ramis">
                         </div>
                         <!-- Texto-->
-                        <div class="fs-6">
+                        <div class="fs-6 pt-2">
                             <p>Tras colgar las botas, la temporada 2006-07 fue segundo entrenador del Juvenil A del Real Madrid. La siguiente temporada debutó como primer entrenador, dirigiendo al equipo cadete madridista.</p>
                             <p>En enero de 2016, tras el ascenso de Zinedine Zidane al primer equipo del Real Madrid, Ramis se convertiría en el entrenador del Real Madrid Castilla.</p>
                             <p>El 24 de noviembre de 2020, fue presentado como nuevo técnico del C. D. Tenerife.</p>
                             <p>El 6 de noviembre de 2023, se convirtió en el nuevo entrenador del R.C.D. Espanyol.</p>
-                            <p class="text-end pt-3"><small>Fuente: <a href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
+                            <p class="text-end pt-3"><small>Fuente: <a class="text-light link-offset-2" href="https://es.soccerway.com/" target="_blank">Soccerway</a>.</small></p>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
